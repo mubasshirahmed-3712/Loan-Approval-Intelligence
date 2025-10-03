@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Approval Intelligence</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💳 Loan Approval Intelligence</h1>
+      <p class="tagline">Smarter Lending Decisions, Powered by AI</p>
+    </header>
+
+    <main>
+      <form method="POST" action="/predict">
+        <h2>Enter Applicant Details</h2>
+
+        <label for="Credit_History">Credit History</label>
+        <select id="Credit_History" name="Credit_History" required>
+          <option value="">-- Select --</option>
+          <option value="1">Good (1)</option>
+          <option value="0">Bad (0)</option>
+        </select>
+
+        <label for="Property_Area">Property Area</label>
+        <select id="Property_Area" name="Property_Area" required>
+          <option value="">-- Select --</option>
+          <option value="0">Rural</option>
+          <option value="1">Urban</option>
+          <option value="2">Semiurban</option>
+        </select>
+
+        <label for="Income">Total Income</label>
+        <input type="number" id="Income" name="Income" placeholder="Enter monthly income" required>
+
+        <button type="submit">🔍 Predict Loan Approval</button>
+      </form>
+
+      {% if prediction %}
+        <div class="result">
+          <h2>Prediction: {{ prediction }}</h2>
+          {% if proba is not none %}
+            <p>Confidence: <strong>{{ (proba * 100) | round(2) }}%</strong></p>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if metrics %}
+        <div class="metrics">
+          <h3>📊 Model Snapshot</h3>
+          <ul>
+            <li><strong>Best Model:</strong> {{ metrics.best_model }}</li>
+            <li><strong>F1 Score:</strong> {{ metrics.f1 }}</li>
+            <li><strong>ROC-AUC:</strong> {{ metrics.roc_auc }}</li>
+            <li><strong>Accuracy:</strong> {{ metrics.accuracy }}</li>
+          </ul>
+        </div>
+      {% endif %}
+    </main>
+
+    <footer>
+      <p>🚀 Built by <strong>Mubasshir Ahmed</strong> — Enhanced Version</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000;
+
+  /* Animated gradient background */
+  background: linear-gradient(270deg, #5682B1, #739EC9, #FFE8DB, #000000);
+  background-size: 800% 800%;
+  animation: gradientShift 20s ease infinite;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Center container */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffffcc; /* semi-transparent white for readability */
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header h1 {
+  font-size: 2.2em;
+  color: #5682B1;
+  margin: 0;
+}
+header .tagline {
+  font-size: 1.1em;
+  color: #739EC9;
+  margin-top: 8px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form h2 {
+  text-align: center;
+  color: #000000;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  background-color: #f9f9f9;
+}
+button {
+  background-color: #5682B1;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: #739EC9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Results */
+.result {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #739EC9;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.result h2 {
+  margin: 0;
+}
+
+/* Metrics section */
+.metrics {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #FFE8DB;
+  border: 1px solid #739EC9;
+}
+.metrics h3 {
+  margin-top: 0;
+  color: #5682B1;
+}
+.metrics ul {
+  list-style-type: none;
+  padding: 0;
+}
+.metrics li {
+  margin-bottom: 6px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9em;
+  color: #739EC9;
+}
+  

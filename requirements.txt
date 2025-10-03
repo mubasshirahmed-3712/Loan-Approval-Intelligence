@@ -1,0 +1,18 @@
+# Core
+numpy
+pandas
+scikit-learn
+
+# Model persistence
+joblib
+
+# ML Boosting (optional but used in notebook)
+xgboost
+
+# Visualization
+matplotlib
+
+# Web App
+Flask
+
+# For JSON, system utils (already in Python stdlib, but safe to pin if needed)
