@@ -61,12 +61,12 @@ This project delivers:
 ---
 
 ## 📈 Visualizations
-- Confusion Matrix  
-  ![Confusion Matrix](results/confusion_matrix.png)  
-- ROC Curve  
-  ![ROC Curve](results/roc_curve.png)  
-- Feature Importance  
-  ![Feature Importance](results/feature_importance.png)  
+<p align="center">
+  <img src="results/confusion_matrix.png" alt="Confusion Matrix" width="30%" />
+  <img src="results/roc_curve.png" alt="ROC Curve" width="30%" />
+  <img src="results/feature_importance.png" alt="Feature Importance" width="30%" />
+</p>
+
 
 🎥 **UI Demo**  
 ![UI Demo](results/UI_overview.gif)  
